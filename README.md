@@ -45,6 +45,5 @@ components.
 ## Demo
 ![](sim1.png)
 ![](sim2.png)
-![](sim3.png)
 
 
