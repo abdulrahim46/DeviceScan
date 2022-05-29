@@ -13,6 +13,7 @@
 		964AE9BD284326000006517E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964AE9BC284326000006517E /* Preview Assets.xcassets */; };
 		964AE9C72843265E0006517E /* DeviceGuru in Frameworks */ = {isa = PBXBuildFile; productRef = 964AE9C62843265E0006517E /* DeviceGuru */; };
 		964AE9CB28432AB10006517E /* UIDevice+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964AE9CA28432AB10006517E /* UIDevice+Ext.swift */; };
+		964AE9D1284344FC0006517E /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964AE9D0284344FC0006517E /* FileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		964AE9BC284326000006517E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		964AE9BE284326000006517E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		964AE9CA28432AB10006517E /* UIDevice+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Ext.swift"; sourceTree = "<group>"; };
+		964AE9D0284344FC0006517E /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				964AE9CA28432AB10006517E /* UIDevice+Ext.swift */,
+				964AE9D0284344FC0006517E /* FileManager.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				964AE9B8284325F90006517E /* ContentView.swift in Sources */,
+				964AE9D1284344FC0006517E /* FileManager.swift in Sources */,
 				964AE9B6284325F90006517E /* DeviceScanApp.swift in Sources */,
 				964AE9CB28432AB10006517E /* UIDevice+Ext.swift in Sources */,
 			);

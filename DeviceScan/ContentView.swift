@@ -63,6 +63,27 @@ struct ContentView: View {
         .background(Color(white: 0.92, opacity: 1))
         .clipShape(RoundedRectangle(cornerRadius: 25.0))
         .padding()
+        
+        // adding button for saving detail to document
+        let fileData = """
+                        \(value(String(describing: name)))
+                        \(value(code))
+                        \(value(String(describing: cpuDetail)))
+                        \(value("\(String(describing: deviceVersion!.major)),\(deviceVersion!.minor)"))
+        """
+        if showDetails{
+            Button(action: {
+                FileManager.shared.save(text: fileData, withFileName: "file\(Int.random(in: 0...1000))")
+            }) {
+                Text("Save to File")
+                    .padding(10.0)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .stroke(lineWidth: 2.0)
+                            .shadow(color: .orange, radius: 10.0)
+                    )
+            }
+        }
     }
 
     // adjusting the value alignment here
