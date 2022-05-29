@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DeviceGuru",
+        "repositoryURL": "https://github.com/InderKumarRathore/DeviceGuru",
+        "state": {
+          "branch": null,
+          "revision": "a9cce04c67dd2e44fca6c47bb27a1ec78d50ed45",
+          "version": "10.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

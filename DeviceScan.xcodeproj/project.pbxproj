@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		964AE9B8284325F90006517E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964AE9B7284325F90006517E /* ContentView.swift */; };
 		964AE9BA284326000006517E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964AE9B9284326000006517E /* Assets.xcassets */; };
 		964AE9BD284326000006517E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964AE9BC284326000006517E /* Preview Assets.xcassets */; };
+		964AE9C72843265E0006517E /* DeviceGuru in Frameworks */ = {isa = PBXBuildFile; productRef = 964AE9C62843265E0006517E /* DeviceGuru */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964AE9C72843265E0006517E /* DeviceGuru in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = DeviceScan;
+			packageProductDependencies = (
+				964AE9C62843265E0006517E /* DeviceGuru */,
+			);
 			productName = DeviceScan;
 			productReference = 964AE9B2284325F90006517E /* DeviceScan.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +117,9 @@
 				Base,
 			);
 			mainGroup = 964AE9A9284325F90006517E;
+			packageReferences = (
+				964AE9C52843265E0006517E /* XCRemoteSwiftPackageReference "DeviceGuru" */,
+			);
 			productRefGroup = 964AE9B3284325F90006517E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -326,6 +334,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		964AE9C52843265E0006517E /* XCRemoteSwiftPackageReference "DeviceGuru" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/InderKumarRathore/DeviceGuru";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		964AE9C62843265E0006517E /* DeviceGuru */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 964AE9C52843265E0006517E /* XCRemoteSwiftPackageReference "DeviceGuru" */;
+			productName = DeviceGuru;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 964AE9AA284325F90006517E /* Project object */;
 }
