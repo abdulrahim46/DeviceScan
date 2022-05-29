@@ -17,23 +17,46 @@ struct ContentView: View {
     private var platform: Platform { guru.platform }
     private var description: String? { try? guru.hardwareDescription() }
     private var deviceVersion: DeviceVersion? { try? guru.deviceVersion() }
+    @State private var showDetails = false
 
+    // MARK:- View & properties
+    
     var body: some View {
+        // adding button for scanning the device
+        Button(action: {
+            showDetails.toggle()
+        }) {
+            Text("Scan Device")
+                .padding(10.0)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10.0)
+                        .stroke(lineWidth: 2.0)
+                        .shadow(color: .blue, radius: 10.0)
+                )
+        }
+        
+        // vstack for detail view
         VStack {
-            Text(description ?? "This Device")
-                .font(.title3).padding(.bottom)
-            HStack {
-                VStack {
-                    headline("Device Name")
-                    headline("Device Code")
-                    headline("Platform")
-                    headline("Device Version")
-                }
-                VStack {
-                    value(String(describing: name))
-                    value(code)
-                    value(String(describing: platform))
-                    value("\(String(describing: deviceVersion!.major)),\(deviceVersion!.minor)")
+            if showDetails {  ///  checking the showDetail property for detail
+                Text(description ?? "This Device")
+                    .font(.title3).padding(.bottom)
+                
+                /// hstack for the heading/titles
+                HStack {
+                    VStack {
+                        headline("Device Name")
+                        headline("Device Code")
+                        headline("Platform")
+                        headline("Device Version")
+                    }
+                    
+                    /// vstack for the values
+                    VStack {
+                        value(String(describing: name))
+                        value(code)
+                        value(String(describing: platform))
+                        value("\(String(describing: deviceVersion!.major)),\(deviceVersion!.minor)")
+                    }
                 }
             }
         }.padding()
@@ -42,12 +65,14 @@ struct ContentView: View {
         .padding()
     }
 
+    // adjusting the value alignment here
     private func value(_ text: String) -> some View {
         Text(text)
             .multilineTextAlignment(.leading)
             .frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, alignment: .leading)
     }
 
+    // adjusting the headline alignment here for multiline text
     private func headline(_ text: String) -> some View {
         Text(text)
             .font(.headline)
