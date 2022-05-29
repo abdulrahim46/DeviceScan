@@ -42,8 +42,13 @@ components.
 - DeviceGuru Library
 - Programmaticlly UI
 
-## Demo
-![](sim1.png)
-![](sim2.png)
+
+## 📱 Screenshots
+
+<p float="left"> 
+<img src="/Documentation/sim1.png" width="200">
+<img src="/Documentation/sim2.png" width="200">   
+</p>    
+    
 
 
