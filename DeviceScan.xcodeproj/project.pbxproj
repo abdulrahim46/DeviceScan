@@ -12,6 +12,7 @@
 		964AE9BA284326000006517E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964AE9B9284326000006517E /* Assets.xcassets */; };
 		964AE9BD284326000006517E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964AE9BC284326000006517E /* Preview Assets.xcassets */; };
 		964AE9C72843265E0006517E /* DeviceGuru in Frameworks */ = {isa = PBXBuildFile; productRef = 964AE9C62843265E0006517E /* DeviceGuru */; };
+		964AE9CB28432AB10006517E /* UIDevice+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964AE9CA28432AB10006517E /* UIDevice+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		964AE9B9284326000006517E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		964AE9BC284326000006517E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		964AE9BE284326000006517E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		964AE9CA28432AB10006517E /* UIDevice+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		964AE9B4284325F90006517E /* DeviceScan */ = {
 			isa = PBXGroup;
 			children = (
+				964AE9C928432A9F0006517E /* Extension */,
 				964AE9B5284325F90006517E /* DeviceScanApp.swift */,
 				964AE9B7284325F90006517E /* ContentView.swift */,
 				964AE9B9284326000006517E /* Assets.xcassets */,
@@ -69,6 +72,14 @@
 				964AE9BC284326000006517E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		964AE9C928432A9F0006517E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				964AE9CA28432AB10006517E /* UIDevice+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 			files = (
 				964AE9B8284325F90006517E /* ContentView.swift in Sources */,
 				964AE9B6284325F90006517E /* DeviceScanApp.swift in Sources */,
+				964AE9CB28432AB10006517E /* UIDevice+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +289,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DeviceScan/Preview Content\"";
+				DEVELOPMENT_TEAM = HQGYL87RGL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DeviceScan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -287,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdul.DeviceScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -298,6 +311,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DeviceScan/Preview Content\"";
+				DEVELOPMENT_TEAM = HQGYL87RGL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DeviceScan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -308,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdul.DeviceScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

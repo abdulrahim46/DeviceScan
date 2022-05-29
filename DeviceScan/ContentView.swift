@@ -13,8 +13,8 @@ struct ContentView: View {
     private let guru = DeviceGuruImplementation()
 
     private var name: Hardware { guru.hardware }
-    private var code: String { guru.hardwareString }
-    private var platform: Platform { guru.platform }
+    private var code: String { UIDevice.current.getCPUName() }
+    private var cpuDetail: String { UIDevice.current.getCPUSpeed() }
     private var description: String? { try? guru.hardwareDescription() }
     private var deviceVersion: DeviceVersion? { try? guru.deviceVersion() }
     @State private var showDetails = false
@@ -45,8 +45,8 @@ struct ContentView: View {
                 HStack {
                     VStack {
                         headline("Device Name")
-                        headline("Device Code")
-                        headline("Platform")
+                        headline("Device Chipset")
+                        headline("Device CPU")
                         headline("Device Version")
                     }
                     
@@ -54,7 +54,7 @@ struct ContentView: View {
                     VStack {
                         value(String(describing: name))
                         value(code)
-                        value(String(describing: platform))
+                        value(String(describing: cpuDetail))
                         value("\(String(describing: deviceVersion!.major)),\(deviceVersion!.minor)")
                     }
                 }
@@ -68,6 +68,7 @@ struct ContentView: View {
     // adjusting the value alignment here
     private func value(_ text: String) -> some View {
         Text(text)
+            .font(.system(size: 14))
             .multilineTextAlignment(.leading)
             .frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, alignment: .leading)
     }
